@@ -1,8 +1,8 @@
 import openai
-from config import OPENAI_API_KEY
+# from config import OPENAI_API_KEY
 
-# openai.api_key = OPENAI_API_KEY
-openai.api_key = os.environ.get('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')
+openai.api_key = os.environ.get('OPENAI_API_KEY')
+
 
 def generate_ai_response(conversation_history, content):
     # (Code for generating AI response using OpenAI API)
