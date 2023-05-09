@@ -8,7 +8,9 @@ class User(db.Model):
 class Conversation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    chatbot_id = db.Column(db.Integer, nullable=False)
     messages = db.relationship('Message', backref='conversation', lazy=True)
+
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
